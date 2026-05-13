@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fretboard-container{
+    padding: 100px;
+}
+
+#fretboard{
+    width: 100%;
+
+    background-color: rgb(48, 30, 5);
+    border: 2px solid rgb(26, 17, 7);
+}
