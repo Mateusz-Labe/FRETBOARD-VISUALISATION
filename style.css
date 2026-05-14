@@ -14,3 +14,7 @@
     background-color: rgb(48, 30, 5);
     border: 2px solid rgb(26, 17, 7);
 }
+
+.note:hover circle {
+    fill: rgb(255, 111, 0);
+}
