@@ -10,7 +10,7 @@ let tuning = [7, 2, 10, 5, 12, 7];
     
         const svgWidth = 900;
         const svgHeight = 300;
-        const paddingY = 20;
+        const paddingY = 15;
         const stringCount = 6;
         const fretcount = 12;
         const stringSpacing = (svgHeight - paddingY * 2) / (stringCount - 1);
@@ -41,7 +41,7 @@ let tuning = [7, 2, 10, 5, 12, 7];
             const y = paddingY + string * stringSpacing;
     
             const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-            group.classList.add("note");
+            group.classList.add("note", noteNames[tuning[string] % noteNames.length]);
             const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
             circle.classList.add('marker');
             circle.setAttribute('cx', x);
@@ -81,7 +81,7 @@ let tuning = [7, 2, 10, 5, 12, 7];
                     const x = (fretPosition(note, fretcount, svgWidth) + fretPosition(note + 1, fretcount, svgWidth)) / 2;
                     const y = paddingY + string * stringSpacing;
                     const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-                    group.classList.add("note");
+                    group.classList.add("note", noteNames[(tuning[string] + note + 1) % noteNames.length]);
                     
                     const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
                     circle.classList.add('marker');
@@ -112,4 +112,15 @@ let tuning = [7, 2, 10, 5, 12, 7];
         tuning = newTuning;
         renderFretboard();
     }
-        
+    
+function toggleNote(note) {
+    const elements = document.querySelectorAll(`.note.${note}`);
+
+    elements.forEach(el => {
+        if (el.style.display === 'none') {
+            el.style.display = 'block';
+        } else {
+            el.style.display = 'none';
+        }
+    });
+}

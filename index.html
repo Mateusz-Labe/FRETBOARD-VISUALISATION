@@ -8,6 +8,26 @@
 </head>
 <body>
     <div class="fretboard-container">
+        <section class="controls">
+            <h2>Toggle Notes</h2>
+
+            <div class="notes" >
+                <button onclick="toggleNote('A')">A</button>
+                <button onclick="toggleNote('A♯')">A♯</button>
+                <button onclick="toggleNote('B')">B</button>
+                <button onclick="toggleNote('C')">C</button>
+                <button onclick="toggleNote('C♯')">C♯</button>
+                <button onclick="toggleNote('D')">D</button>
+                <button onclick="toggleNote('D♯')">D♯</button>
+                <button onclick="toggleNote('E')">E</button>
+                <button onclick="toggleNote('F')">F</button>
+                <button onclick="toggleNote('F♯')">F♯</button>
+                <button onclick="toggleNote('G')">G</button>
+                <button onclick="toggleNote('G♯')">G♯</button>
+            </div>
+        </section>
+        <svg id="fretboard" viewBox="-50 0  940 300">
+        </svg>
         <div class="options">
             <div class="tunings">
                 <button onclick="chooseTuning([7, 2, 10, 5, 12, 7])">E Standard</button>
@@ -15,11 +35,9 @@
                 <button onclick="chooseTuning([5, 0, 8, 3, 10, 5])">D Standard</button>
                 <button onclick="chooseTuning([3, 10, 6, 1, 8, 3])">C Standard</button>
                 <button onclick="chooseTuning([5, 12, 8, 3, 10, 3])">Drop C</button>
+                <button>Custom</button>
             </div>
         </div>
-
-        <svg id="fretboard" viewBox="-50 0  940 300">
-        </svg>
     </div>
 
 <script src="script.js"></script>

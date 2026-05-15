@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
+}
+
+body{
+    background-color: #1B3C53;
 }
 
 .fretboard-container{
@@ -14,7 +19,53 @@
     background-color: rgb(48, 30, 5);
     border: 2px solid rgb(26, 17, 7);
 }
-
+.note circle {
+    transition: .2s;
+}
 .note:hover circle {
     fill: rgb(255, 111, 0);
+}
+
+.tunings button{
+    padding: 10px 20px;
+    margin-right: 5px;
+    font-size: 1.2em;
+    border: 2px solid #123f44;
+    background-color: #A1C2BD;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 5px;
+}
+
+.tunings button:hover{
+    background-color: #60baad;
+}
+
+.notes{
+    display: flex;
+    gap: 30px;
+    margin: 10px 0;
+}
+
+.notes button{
+    border-radius: 50%;
+    margin-right: 5px;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    font-size: 1.2em;
+    border: none;
+    border: 2px solid #123f44;
+    background-color: #A1C2BD;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.controls{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
