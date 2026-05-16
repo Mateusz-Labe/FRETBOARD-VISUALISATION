@@ -113,9 +113,9 @@ let tuning = [7, 2, 10, 5, 12, 7];
         renderFretboard();
     }
     
-function toggleNote(note) {
+function toggleNote(button, note) {
     const elements = document.querySelectorAll(`.note.${note}`);
-
+    button.classList.toggle("clicked");
     elements.forEach(el => {
         if (el.style.display === 'none') {
             el.style.display = 'block';
@@ -124,3 +124,34 @@ function toggleNote(note) {
         }
     });
 }
+
+const select_key = document.querySelector(".dropdown-key-select");
+const option_key = document.querySelector(".dropdown-key-option");
+let key;
+
+document.addEventListener('click', (e) => {
+    if (e.target.closest('.dropdown-key-select')) option_key.classList.toggle('show');
+    else option_key.classList.remove('show');
+
+    if(e.target.closest('.dropdown-key-option div')){
+        select_key.textContent = e.target.textContent;
+        key = select_key.textContent
+        console.log("Current key:" + key)
+        option_key.classList.remove('show');
+    }
+})
+
+const select_mode = document.querySelector(".dropdown-mode-select");
+const option_mode = document.querySelector(".dropdown-mode-option");
+
+document.addEventListener('click', (e) => {
+    if (e.target.closest('.dropdown-mode-select')) option_mode.classList.toggle('show');
+    else option_mode.classList.remove('show');
+
+    if(e.target.closest('.dropdown-mode-option div')){
+        select_mode.textContent = e.target.textContent;
+        key = select_mode.textContent
+        console.log("Current key:" + key)
+        option_mode.classList.remove('show');
+    }
+})

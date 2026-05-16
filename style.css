@@ -61,6 +61,9 @@ body{
     cursor: pointer;
     transition: .2s;
 }
+.notes button.clicked{
+    background-color: #425754;
+}
 
 .controls{
     width: 100%;
@@ -68,4 +71,114 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.scale{
+
+}
+
+.dropdown-key-select{
+    padding: 10px 40px 10px 10px;
+    margin-right: 5px;
+    font-size: 1.2em;
+    border: 2px solid #123f44;
+    background-color: #A1C2BD;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+.dropdown-key-select:hover{
+    background-color: #60baad;
+}
+
+
+.dropdown-key-option {
+    opacity: 0;
+    visibility: hidden;
+    font-size: 1.2em;
+    overflow-y: auto;
+    height: 150px;
+}
+
+.dropdown-key-option div{
+    padding: 10px 40px 10px 10px;
+    margin-right: 5px;
+    border: 2px solid #123f44;
+    background-color: #A1C2BD;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+.dropdown-key-option.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.scale{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0.5;
+}
+
+.dropdown-container{
+    width: 100%;
+    display: flex;
+}
+
+.tunings{
+    flex-grow: 0.5;
+}
+
+.dropdown-mode-select{
+    padding: 10px 40px 10px 10px;
+    margin-right: 5px;
+    font-size: 1.2em;
+    border: 2px solid #123f44;
+    background-color: #A1C2BD;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+.dropdown-mode-select:hover{
+    background-color: #60baad;
+}
+
+
+.dropdown-mode-option {
+    opacity: 0;
+    visibility: hidden;
+    font-size: 1.2em;
+    overflow-y: auto;
+    height: 150px;
+}
+
+.dropdown-mode-option div{
+    padding: 10px 40px 10px 10px;
+    margin-right: 5px;
+    border: 2px solid #123f44;
+    background-color: #A1C2BD;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+.dropdown-mode-option.show{
+    opacity: 1;
+    visibility: visible;
 }

@@ -3,33 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fretboard Visualisation</title>
+    <title>Guitar Practice</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="other-exercies">
+        <h2>Other exercies</h2>
+    </div>
     <div class="fretboard-container">
         <section class="controls">
             <h2>Toggle Notes</h2>
 
             <div class="notes" >
-                <button onclick="toggleNote('A')">A</button>
-                <button onclick="toggleNote('A♯')">A♯</button>
-                <button onclick="toggleNote('B')">B</button>
-                <button onclick="toggleNote('C')">C</button>
-                <button onclick="toggleNote('C♯')">C♯</button>
-                <button onclick="toggleNote('D')">D</button>
-                <button onclick="toggleNote('D♯')">D♯</button>
-                <button onclick="toggleNote('E')">E</button>
-                <button onclick="toggleNote('F')">F</button>
-                <button onclick="toggleNote('F♯')">F♯</button>
-                <button onclick="toggleNote('G')">G</button>
-                <button onclick="toggleNote('G♯')">G♯</button>
+                <button onclick="toggleNote(this, 'A')">A</button>
+                <button onclick="toggleNote(this, 'A♯')">A♯</button>
+                <button onclick="toggleNote(this, 'B')">B</button>
+                <button onclick="toggleNote(this, 'C')">C</button>
+                <button onclick="toggleNote(this, 'C♯')">C♯</button>
+                <button onclick="toggleNote(this, 'D')">D</button>
+                <button onclick="toggleNote(this, 'D♯')">D♯</button>
+                <button onclick="toggleNote(this, 'E')">E</button>
+                <button onclick="toggleNote(this, 'F')">F</button>
+                <button onclick="toggleNote(this, 'F♯')">F♯</button>
+                <button onclick="toggleNote(this, 'G')">G</button>
+                <button onclick="toggleNote(this, 'G♯')">G♯</button>
             </div>
         </section>
         <svg id="fretboard" viewBox="-50 0  940 300">
         </svg>
         <div class="options">
             <div class="tunings">
+                <h2>Select tuning</h2>
                 <button onclick="chooseTuning([7, 2, 10, 5, 12, 7])">E Standard</button>
                 <button onclick="chooseTuning([7, 2, 10, 5, 12, 5])">Drop D</button>
                 <button onclick="chooseTuning([5, 0, 8, 3, 10, 5])">D Standard</button>
@@ -37,10 +41,45 @@
                 <button onclick="chooseTuning([5, 12, 8, 3, 10, 3])">Drop C</button>
                 <button>Custom</button>
             </div>
+            <div class="scale">
+                <h2>Select scale</h2>
+                <div class="dropdown-container">
+                    <div class="dropdown-key">
+                        <div class="dropdown-key-select">Key</div>
+                        <div class="dropdown-key-option">
+                            <div>C</div>
+                            <div>C♯</div>
+                            <div>D</div>
+                            <div>D♯</div>
+                            <div>E</div>
+                            <div>F</div>
+                            <div>F♯</div>
+                            <div>G</div>
+                            <div>G♯</div>
+                            <div>A</div>
+                            <div>A♯</div>
+                            <div>B</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-mode">
+                        <div class="dropdown-mode-select">Mode</div>
+                        <div class="dropdown-mode-option">
+                            <div>Ionian</div>
+                            <div>Phrygian</div>
+                            <div>More</div>
+                            <div>More</div>
+                            <div>More</div>
+                            <div>More</div>
+                            <div>More</div>
+                            <div>More</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-<script src="script.js"></script>
-
+        
+        <script src="script.js"></script>
+        
 </body>
 </html>
